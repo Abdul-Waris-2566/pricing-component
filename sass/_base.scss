@@ -1,0 +1,27 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  width: 100vw;
+  max-width: 97vw;
+  height: 100vh;
+  background-image: url(../images/bg-top.svg);
+  background-repeat: no-repeat;
+  background-size: 20rem;
+  background-position: right -5rem top;
+  z-index: -5;
+}
+
+@media (max-width: 600px) {
+  body::before {
+    background-size: 15rem;
+    background-position: right -7rem top;
+  }
+}
